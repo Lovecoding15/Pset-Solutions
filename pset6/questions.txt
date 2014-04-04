@@ -1,0 +1,33 @@
+0.  It is the longest word in a dictionary. It refers to the lung disease caused by the inhalation of the silica dust.
+
+1.  The getrusage() system call returns information describing the resources utilized by the current process, 
+    or all its terminated child processes. 
+    
+2.  16
+
+3.  Passing in pointers saves memory, because the data contained within the structs needn't be copied into local memory.  
+
+4.  Speller.c reads words from the file, character by character, using a for loop to begin reading the first character of 
+    the file, incrementing by one character until it reaches the end of the file. If the character is a letter or apostrophe,
+    it is added to a word. If the word becomes larger than what we have defined as the largest word possible, the word is
+    ignored. If the word has a digit, it is ignored as well.
+    If a word still exists, it is counted, checked for spelling, and printed. The amount of time it takes to complete the
+    checking is logged in ti_check.    
+
+
+5.  Using fgetc is more efficient, because in this way, we can automatically stop reading in a word when we know it is 
+    no longer valid due to our rules on what constitutes a word.  For example, if a word has non-alpha, non-apostrophe 
+    characters or has length > 45, we stop reading.  With fscanf, a user could input a huge (one-string) text file as 
+    the file to be spell checked with the program spending lots of time trying to load that into memory.
+    
+6.  This would ensure that the values passed in by pointer are not altered inside the function, but their values can be used.
+
+7.  First define the structure of the node with a word and a next pointer.Next allocate space for the node using malloc.
+    Next get word to add to dictionary. Calculate the hash key and traverse through the bucket to search for the key.
+    If key is found add to the begining of the linked list or add a new bucket and add the word to the begining of the bucket.
+  
+8.  Initially when I created the hast table, the load function was taking a lot of time to load the dictionary.
+ 
+9.  Then I optimized my hash table and the load function to minimize the time.
+
+10. With further dictionary analysis and dictionary processing, I believe I could make it even faster.

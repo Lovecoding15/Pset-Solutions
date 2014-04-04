@@ -1,0 +1,59 @@
+0.  BMP has 1 bit-2 colors, 2 bit-4 colors, 4 bit-16 colors, 8 bit-256 colors, 16 bit-2^16 colors, 24 bit=2^24 colors, 32bit-2^32 colors.
+    GIF is 8 bit so 256 colors possible.JPEG is 24 bit, so 2^24 colors are possible.PNG is 32 bit(24 bit for colors and 8 bit for alpha/transparency), which means 2^24 colors possibility. 
+    
+1.  GIF
+
+2.  Lossless Compression- Recreates a compressed file as an identical match to the original file.
+    Lossy Compression - eliminates repeated or "unnecessary" pieces of data. 
+    
+3.  JPEG
+
+4.  When the operating system erases a FAT ﬁle, two things occur. 
+    First, the system modiﬁes the ﬁlename’s ﬁrst character in the ﬁle’s directory entry to signal that the ﬁle 
+    has been deleted and that the directory entry can be recycled. Second, the system moves all of the ﬁle’s 
+    FAT clusters to the hard drive’s list of free clusters. The actual ﬁle data is never touched.
+    
+5.  Overwriting the drive’s data so that it cannot be recovered.
+
+
+6.  The <stdint.h> header shall declare sets of integer types having specified widths, and shall define corresponding 
+    sets of macros. It shall also define macros that specify limits of integer types corresponding to types defined in 
+    other standard headers.
+    
+7.  Use those predefined type for specific number usage.
+
+8.  BYTE = 8 bit.
+    DWORD = 32 bit 
+    LONG = 32 bit
+    WORD = 16 bit 
+
+
+9.  The first 2 bytes of any BMP file is the bfType. It must be set to character B and M to indicate the bitmap.
+
+
+10. bfSize specifies the size, in bytes, of the bitmap file.
+	biSize specifies the size of the structure in bytes.
+	
+	
+11. If biHeight is negative, the bitmap is a top-down DIB (device-independent bitmap)
+	and its origin is the upper left corner.
+	
+	
+12. biBitCount Specifies the number of bits per pixel.
+	
+	
+13. Not enough disk space, no authoritation to creat file, etc.
+
+
+14. Since there will be only 1 BITMAPINFOHEADER inside a bmp, the fread should only read 1 set of sizeof(BITMAPFILEHEADER).
+
+15. 1
+
+
+16. fseek(inptr, padding, SEEK_CUR);
+    The fseek() function sets the file position indicator for the inptr pointed to by inptr. 
+    The new position, measured in bytes, is obtained by adding padding bytes to the position.
+    
+    
+17. SEEK_CUR moves the pointer x bytes down from the current pointer position.
+
